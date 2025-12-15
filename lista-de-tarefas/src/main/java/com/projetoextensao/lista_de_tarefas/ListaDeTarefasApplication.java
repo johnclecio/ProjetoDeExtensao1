@@ -10,4 +10,3 @@ public class ListaDeTarefasApplication {
         SpringApplication.run(ListaDeTarefasApplication.class, args);
     }
 }
-

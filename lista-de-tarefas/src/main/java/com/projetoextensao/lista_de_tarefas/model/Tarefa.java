@@ -10,21 +10,14 @@ public class Tarefa {
     private Long id;
 
     private String descricao;
-    private boolean concluida;
 
-    public Tarefa() {}
-
-    public Tarefa(String descricao, boolean concluida) {
-        this.descricao = descricao;
-        this.concluida = concluida;
+    // construtor vazio (obrigatório)
+    public Tarefa() {
     }
 
+    // getters e setters
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {   // ⬅️ ADICIONE ISTO
-        this.id = id;
     }
 
     public String getDescricao() {
@@ -33,13 +26,5 @@ public class Tarefa {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public boolean isConcluida() {
-        return concluida;
-    }
-
-    public void setConcluida(boolean concluida) {
-        this.concluida = concluida;
     }
 }
