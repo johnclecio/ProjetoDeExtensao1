@@ -1,0 +1,84 @@
+# ProjetoDeExtensao1
+
+## 📋 Descrição
+
+Gerenciador de Tarefas desenvolvido com **Spring Boot**, utilizando **JPA (Hibernate)** e banco de dados **H2** em memória. A aplicação permite cadastrar, listar, atualizar e excluir tarefas, sendo um projeto acadêmico e de extensão voltado ao aprendizado de **APIs REST**, **persistência de dados** e **boas práticas com Spring Boot**.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* Java 17+
+* Spring Boot
+* Spring Data JPA
+* H2 Database
+* Maven
+
+---
+
+## ⚙️ Funcionalidades
+
+* ✅ Cadastro de tarefas
+* 📄 Listagem de tarefas
+* ✏️ Atualização de tarefas
+* ❌ Exclusão de tarefas
+* 🗄️ Persistência de dados com H2
+
+---
+
+## ▶️ Como Executar o Projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/ProjetoDeExtensao1.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd ProjetoDeExtensao1
+```
+
+3. Execute a aplicação:
+
+```bash
+mvn spring-boot:run
+```
+
+4. A aplicação estará disponível em:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 🧪 Console do H2
+
+* URL: `http://localhost:8080/h2-console`
+* JDBC URL: `jdbc:h2:mem:testdb`
+* Usuário: `sa`
+* Senha: *(em branco)*
+
+---
+
+## 🔗 Endpoints Principais (Exemplo)
+
+* `GET /tarefas` → Lista todas as tarefas
+* `POST /tarefas` → Cadastra uma nova tarefa
+* `PUT /tarefas/{id}` → Atualiza uma tarefa
+* `DELETE /tarefas/{id}` → Remove uma tarefa
+
+---
+
+## 🎯 Objetivo Acadêmico
+
+Este projeto foi desenvolvido como **projeto de extensão**, com o objetivo de aplicar na prática conceitos de desenvolvimento backend, organização de código, persistência de dados e criação de APIs REST.
+
+---
+
+## 📌 Observações
+
+* O banco H2 é reiniciado sempre que a aplicação é parada.
+* Projeto com foco didático e acadêmico.
