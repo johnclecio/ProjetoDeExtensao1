@@ -16,25 +16,11 @@ public class TarefaService {
         this.repository = repository;
     }
 
-    public List<Tarefa> listarTodas() {
-        return repository.findAll();
-    }
-
     public Tarefa salvar(Tarefa tarefa) {
         return repository.save(tarefa);
     }
 
-    public Tarefa atualizar(Long id, Tarefa novaTarefa) {
-        Tarefa tarefa = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Tarefa não encontrada"));
-
-        tarefa.setDescricao(novaTarefa.getDescricao());
-        tarefa.setConcluida(novaTarefa.isConcluida());
-
-        return repository.save(tarefa);
-    }
-
-    public void deletar(Long id) {
-        repository.deleteById(id);
+    public List<Tarefa> listar() {
+        return repository.findAll();
     }
 }
