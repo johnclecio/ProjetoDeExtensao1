@@ -1,84 +1,113 @@
-# ProjetoDeExtensao1
+📋 Lista de Tarefas – API REST com Spring Boot
 
-## 📋 Descrição
+Este projeto é uma API REST para gerenciamento de tarefas, desenvolvida como parte de um Projeto de Extensão, com o objetivo de aplicar na prática os conceitos de desenvolvimento backend utilizando Java e Spring Boot.
 
-Gerenciador de Tarefas desenvolvido com **Spring Boot**, utilizando **JPA (Hibernate)** e banco de dados **H2** em memória. A aplicação permite cadastrar, listar, atualizar e excluir tarefas, sendo um projeto acadêmico e de extensão voltado ao aprendizado de **APIs REST**, **persistência de dados** e **boas práticas com Spring Boot**.
+A aplicação permite que usuários cadastrem e visualizem tarefas, servindo como uma base didática para o estudo de APIs REST, persistência de dados e organização em camadas.
 
----
+🚀 Tecnologias Utilizadas
 
-## 🛠️ Tecnologias Utilizadas
+Java
 
-* Java 17+
-* Spring Boot
-* Spring Data JPA
-* H2 Database
-* Maven
+Spring Boot
 
----
+Spring Web
 
-## ⚙️ Funcionalidades
+Spring Data JPA
 
-* ✅ Cadastro de tarefas
-* 📄 Listagem de tarefas
-* ✏️ Atualização de tarefas
-* ❌ Exclusão de tarefas
-* 🗄️ Persistência de dados com H2
+H2 Database
 
----
+Maven
 
-## ▶️ Como Executar o Projeto
+Tomcat Embutido
 
-1. Clone o repositório:
+📂 Organização do Projeto
 
-```bash
-git clone https://github.com/seu-usuario/ProjetoDeExtensao1.git
-```
+O projeto foi estruturado seguindo boas práticas de separação de responsabilidades, com pacotes distintos para:
 
-2. Acesse a pasta do projeto:
+Controller (camada de entrada da API)
 
-```bash
-cd ProjetoDeExtensao1
-```
+Model (entidades do sistema)
 
-3. Execute a aplicação:
+Repository (acesso a dados)
 
-```bash
-mvn spring-boot:run
-```
+Service (regra de negócio – em evolução)
 
-4. A aplicação estará disponível em:
+Classe principal de inicialização da aplicação
 
-```
-http://localhost:8080
-```
+🧱 Etapas Desenvolvidas
+1️⃣ Criação do Projeto
 
----
+O projeto foi criado utilizando Spring Boot, com as dependências necessárias para criar uma API REST e integrar um banco de dados relacional em memória.
 
-## 🧪 Console do H2
+2️⃣ Inicialização da Aplicação
 
-* URL: `http://localhost:8080/h2-console`
-* JDBC URL: `jdbc:h2:mem:testdb`
-* Usuário: `sa`
-* Senha: *(em branco)*
+Foi definida uma classe principal responsável por iniciar a aplicação Spring Boot, permitindo que o servidor embutido execute a aplicação localmente.
 
----
+3️⃣ Modelagem da Entidade Tarefa
 
-## 🔗 Endpoints Principais (Exemplo)
+Foi criada a entidade que representa uma tarefa no sistema.
+Atualmente, cada tarefa possui:
 
-* `GET /tarefas` → Lista todas as tarefas
-* `POST /tarefas` → Cadastra uma nova tarefa
-* `PUT /tarefas/{id}` → Atualiza uma tarefa
-* `DELETE /tarefas/{id}` → Remove uma tarefa
+Identificador único
 
----
+Descrição
 
-## 🎯 Objetivo Acadêmico
+Status de conclusão
 
-Este projeto foi desenvolvido como **projeto de extensão**, com o objetivo de aplicar na prática conceitos de desenvolvimento backend, organização de código, persistência de dados e criação de APIs REST.
+Prioridade
 
----
+Data de criação automática
 
-## 📌 Observações
+Essa modelagem permite evoluir o sistema de forma organizada.
 
-* O banco H2 é reiniciado sempre que a aplicação é parada.
-* Projeto com foco didático e acadêmico.
+4️⃣ Persistência com JPA
+
+O projeto utiliza Spring Data JPA para realizar a persistência das tarefas no banco de dados, abstraindo operações como salvar e listar registros.
+
+5️⃣ Criação da API REST
+
+Foi criado um controller REST responsável por expor os endpoints da aplicação, permitindo:
+
+Inserir novas tarefas
+
+Listar todas as tarefas cadastradas
+
+A comunicação é feita via JSON.
+
+🗄️ Banco de Dados H2
+
+O banco de dados H2 foi configurado para facilitar o desenvolvimento e os testes, eliminando a necessidade de um banco externo.
+O console web do H2 permite visualizar as tabelas e dados gerados pela aplicação.
+
+📈 Estado Atual do Projeto
+
+API REST funcional
+
+Cadastro de tarefas ativo
+
+Listagem de tarefas funcionando
+
+Persistência com banco H2
+
+Nível do projeto: Iniciante para Intermediário
+Status: Em desenvolvimento
+
+🔮 Próximas Evoluções Planejadas
+
+Buscar tarefa por identificador
+
+Atualizar tarefas existentes
+
+Marcar tarefas como concluídas
+
+Remover tarefas
+
+Validações de dados
+
+Padronização de prioridade
+
+Implementação completa da camada de serviço
+
+👨‍💻 Contexto Acadêmico
+
+Este projeto foi desenvolvido com foco educacional, como parte de um Projeto de Extensão, visando consolidar conhecimentos em Java, Spring Boot e desenvolvimento de APIs REST.

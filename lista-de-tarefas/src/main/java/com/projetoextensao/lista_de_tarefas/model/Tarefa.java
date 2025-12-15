@@ -1,6 +1,7 @@
 package com.projetoextensao.lista_de_tarefas.model;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Tarefa {
@@ -11,11 +12,18 @@ public class Tarefa {
 
     private String descricao;
 
-    // construtor vazio (obrigatório)
+    private boolean concluida = false;
+
+    private String prioridade;
+
+    private LocalDateTime dataCriacao;
+
     public Tarefa() {
+        this.dataCriacao = LocalDateTime.now();
     }
 
-    // getters e setters
+    // GETTERS E SETTERS
+
     public Long getId() {
         return id;
     }
@@ -24,7 +32,31 @@ public class Tarefa {
         return descricao;
     }
 
+    public boolean isConcluida() {
+        return concluida;
+    }
+
+    public String getPrioridade() {
+        return prioridade;
+    }
+
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
+    }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public void setConcluida(boolean concluida) {
+        this.concluida = concluida;
+    }
+
+    public void setPrioridade(String prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
     }
 }

@@ -4,6 +4,8 @@ import com.projetoextensao.lista_de_tarefas.model.Tarefa;
 import com.projetoextensao.lista_de_tarefas.repository.TarefaRepository;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/tarefas")
 public class TarefaController {
@@ -17,5 +19,10 @@ public class TarefaController {
     @PostMapping
     public Tarefa criar(@RequestBody Tarefa tarefa) {
         return repository.save(tarefa);
+    }
+
+    @GetMapping
+    public List<Tarefa> listar() {
+        return repository.findAll();
     }
 }
