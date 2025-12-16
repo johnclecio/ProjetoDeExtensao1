@@ -1,6 +1,8 @@
 package com.projetoextensao.lista_de_tarefas.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -10,7 +12,7 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    
+    @NotBlank(message = "Descrição não pode ser vazia")
     private String descricao;
 
     private boolean concluida = false;

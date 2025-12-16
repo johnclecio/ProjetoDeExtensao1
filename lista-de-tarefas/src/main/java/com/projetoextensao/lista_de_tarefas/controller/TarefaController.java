@@ -2,6 +2,7 @@ package com.projetoextensao.lista_de_tarefas.controller;
 
 import com.projetoextensao.lista_de_tarefas.model.Tarefa;
 import com.projetoextensao.lista_de_tarefas.repository.TarefaRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,9 +20,10 @@ public class TarefaController {
         this.repository = repository;
     }
 
+    //ok
     //Criar Tarefa retorna = 201 Created
     @PostMapping
-    public ResponseEntity<Tarefa>  criar(@RequestBody Tarefa tarefa) {
+    public ResponseEntity<Tarefa>  criar(@RequestBody @Valid  Tarefa tarefa) {
         Tarefa salva = repository.save(tarefa);
         return ResponseEntity.status(HttpStatus.CREATED).body(salva);
     }
