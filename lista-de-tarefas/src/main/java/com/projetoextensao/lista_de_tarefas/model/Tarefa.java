@@ -10,6 +10,7 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    
     private String descricao;
 
     private boolean concluida = false;
