@@ -23,7 +23,7 @@ public class TarefaController {
     //ok
     //Criar Tarefa retorna = 201 Created
     @PostMapping
-    public ResponseEntity<Tarefa>  criar(@RequestBody @Valid  Tarefa tarefa) {
+    public ResponseEntity<Tarefa>  criar(@Valid @RequestBody   Tarefa tarefa) {
         Tarefa salva = repository.save(tarefa);
         return ResponseEntity.status(HttpStatus.CREATED).body(salva);
     }

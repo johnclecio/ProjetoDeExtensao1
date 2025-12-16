@@ -12,7 +12,7 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Descrição não pode ser vazia")
+    @NotBlank(message = "Descrição é obrigatória")
     private String descricao;
 
     private boolean concluida = false;
